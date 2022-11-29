@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{name}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="userlist"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button  [routerLink]="['/home']" icon="home">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col sizeLg="6" sizeMd="6" sizeXs="12">
+      <ion-card>
+        <img src={{image}}>
+        <h3><strong>Nombre: </strong>{{name}}</h3>
+        <h4><strong>Estatus: </strong>{{status}}</h4>
+        <h5><strong>Especie: </strong>{{species}}</h5>
+        <h5><strong>Género: </strong>{{gender}}</h5>
+        <h5><strong>Lugar de Origen: </strong>{{origin}}</h5>
+        <h5><strong>Ubucación Actual: </strong>{{location}}</h5>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
+

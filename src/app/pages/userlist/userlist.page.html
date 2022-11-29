@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Personajes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button  [routerLink]="['/home']" icon="home">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list >
+    <ion-item *ngFor="let character of characters" [routerLink]="['/character-des',character.id]">
+      <ion-avatar>
+        <img src={{character.image}} />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{character.name}}</h2>
+        <h3>{{character.status}}</h3>
+        <p>{{character.gender}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <!-- <ion-button [routerLink]="['/usersnav',{{next}}]">Siguiente</ion-button> -->
+      <ion-button (click)="gotoNext()">Siguiente</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
